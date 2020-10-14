@@ -1,7 +1,7 @@
 {
-  "name": "hanssagita",
+  "name": "Lightweight-html-with-sass-template",
   "version": "1.0.0",
-  "description": "hanssagita",
+  "description": "Lightweight-html-with-sass-template",
   "main": "index.js",
   "scripts": {
     "watch:sass": "node-sass sass/main.scss css/style.css -w",
