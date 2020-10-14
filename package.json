@@ -12,10 +12,11 @@
     "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/style.concat.css -o css/style.prefix.css",
     "compress:css": "node-sass css/style.prefix.css css/style.css --output-style compressed",
     "build:css": "npm-run-all compile:sass concat:css prefix:css compress:css && npm run copyfile:css",
-    "copyfile:html": "copyfiles index.html src -u",
+    "copyfile:html": "copyfiles index.html dist -u",
     "copyfile:css": "copyfiles css/style.css dist -u",
-    "build:html": "npm run copyfile:html && html-minifier --input-dir src --output-dir dist --remove-comments --collapse-whitespace --minify-js true --minify-css true",
-    "build": "npm run build:html && npm run build:css"
+    "copyfile:img": "copyfiles img/* dist -a",
+    "build:html": "npm run copyfile:html && html-minifier --input-dir dist --output-dir dist --remove-comments --collapse-whitespace --minify-js true --minify-css true",
+    "build": "npm run build:html && npm run build:css && npm run copyfile:img"
   },
   "author": "Hans",
   "license": "ISC",
