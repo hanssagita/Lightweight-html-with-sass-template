@@ -1,1 +1,1 @@
-hanssagita.com v2
+A lightweight template for developing native html with native css and sass
